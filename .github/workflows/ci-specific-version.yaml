@@ -9,15 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install dependencies
+      - name: Check version
         uses: php-actions/composer@79-minor-versions
         with:
           php_version: '8.1'
           version: '2.3.1'
-          ssh_key: ${{ secrets.SSH_KEY }}
-          ssh_key_pub: ${{ secrets.SSH_KEY_PUB }}
-
-      - uses: actions/upload-artifact@v2
-        with:
-          name: debug-output
-          path: output.log
+          only_args: --version
