@@ -12,20 +12,17 @@ jobs:
       - name: Use specific version 2.3.1
         uses: php-actions/composer@79-minor-versions
         with:
-          php_version: '8.1'
           version: '2.3.1'
           only_args: --version
 
       - name: Use latest version 2.3
         uses: php-actions/composer@79-minor-versions
         with:
-          php_version: '8.1'
-          version: '2.3'
+          version: '2.2'
           only_args: --version
 
       - name: Use latest version 2
         uses: php-actions/composer@79-minor-versions
         with:
-          php_version: '8.1'
           version: '2'
           only_args: --version
